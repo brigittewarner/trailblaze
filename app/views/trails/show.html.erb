@@ -1,6 +1,29 @@
-<table>
-	<h1>Trail</h1>
-	<tr>
+<body>
+  <div id="content">
+    <table id="wrapper">
+      <tbody>
+      	<h1><%= link_to "back to trails", user_trails_path(@user) %></h1>
+        <tr>
+          <td>
+	        <table id="trailmakers">
+              <tbody>
+                <tr>
+                  <td>
+    <div id="navigation">
+      <!-- Navigation start -->
+      <ul id="menu">
+        <li>
+        	<%= link_to "Trails", root_url + "/users/:user_id/trails", id: "trails" %>
+        </li>
+        <li></li>
+      </ul>
+      <!-- Navigation end -->
+    </div>
+  </td>
+  <td>
+  <div id="trailhead">
+  <!-- Trailhead start -->
+    <tr>
 		<th>ID</th>
 		<td><%= @trail.id %></td>
 		<th>Name</th>
@@ -11,5 +34,13 @@
 		<td><%= time_ago_in_words @trail.created_at %> ago on</td>,
 		<td><%= @trail.created_at.strftime('%m/%d/%Y') %></td>
 	</tr>
+	</div>
+	<!-- Trailhead end -->
+  <td>
+      <!-- Trailmarker start -->
+      <div class="trailmarker">
+      	
+      </div>
+      <!-- Trailmarker end -->
+  </td>	
 </table>
-<%= link_to "back to trails", trails_path %>
