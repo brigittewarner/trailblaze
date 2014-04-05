@@ -11,7 +11,7 @@ Merit::Badge.create!(
 
 Merit::Badge.create!(
   id: 3,
-  name: "Fresh",
+  name: "Blazing",
   description: "Created an account"
 )
 
