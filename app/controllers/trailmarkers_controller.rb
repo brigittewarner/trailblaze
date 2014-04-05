@@ -1,0 +1,2 @@
+class TrailmarkersController < ApplicationController
+end
