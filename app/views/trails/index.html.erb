@@ -1,6 +1,6 @@
 <h1>My Trails</h1>
 <ul>
-	<% for trail in @trails %>
+	<% @trails.each do |trail| %>
 		<li><%= trail.name %></li>
 		<li><%= trail.description %></li>
 	<% end %>

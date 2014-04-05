@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20140405145648) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "badges_sashes", force: true do |t|
     t.integer  "badge_id"
     t.integer  "sash_id"
@@ -20,9 +23,9 @@ ActiveRecord::Schema.define(version: 20140405145648) do
     t.datetime "created_at"
   end
 
-  add_index "badges_sashes", ["badge_id", "sash_id"], name: "index_badges_sashes_on_badge_id_and_sash_id"
-  add_index "badges_sashes", ["badge_id"], name: "index_badges_sashes_on_badge_id"
-  add_index "badges_sashes", ["sash_id"], name: "index_badges_sashes_on_sash_id"
+  add_index "badges_sashes", ["badge_id", "sash_id"], name: "index_badges_sashes_on_badge_id_and_sash_id", using: :btree
+  add_index "badges_sashes", ["badge_id"], name: "index_badges_sashes_on_badge_id", using: :btree
+  add_index "badges_sashes", ["sash_id"], name: "index_badges_sashes_on_sash_id", using: :btree
 
   create_table "merit_actions", force: true do |t|
     t.integer  "user_id"
