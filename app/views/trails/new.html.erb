@@ -1,7 +1,14 @@
+<<<<<<< HEAD
 <%= form_for(@trails) do |f| %>
 	<%= f.label :name %>
 	<%= f.text_field :description %>
 	<%= f.timestamps %>
+=======
+<%= form_for(@trail) do |f| %>
+	<%= t.string :name %>
+	<%= t.text :description %>
+	<%= t.timestamps %>
+>>>>>>> FETCH_HEAD
 	<%= f.submit %>
 <% end %>
 
