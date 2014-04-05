@@ -1,10 +1,10 @@
 <body>
   <div id="content">
 	<table id="trailmarkers">
+	<tr>
   	<td>
   	<div id="trailhead">
   <!-- Trailhead start -->
-    <tr>
 		<th>Name</th>
 		<td><%= @trail.name %></td>
 		<th>Description</th>
@@ -12,7 +12,6 @@
 		<th>Started</th>
 		<td><%= time_ago_in_words @trail.created_at %> ago on</td>,
 		<td><%= @trail.created_at.strftime('%m/%d/%Y') %></td>
-	</tr>
 	</div>
 	<!-- Trailhead end -->
   </td>
