@@ -1,3 +1,9 @@
+Merit::Badge.create!(
+  id: 1,
+  name: "Fresh Start",
+  description: "Created an account"
+)
+
 # Use this hook to configure merit parameters
 Merit.setup do |config|
   # Check rules on each request or in background
