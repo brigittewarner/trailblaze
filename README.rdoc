@@ -5,8 +5,8 @@
   * http://stackoverflow.com/questions/5612736/how-to-implement-a-friendship-model-in-rails-3-for-a-social-networking-applicati
 
 
-* Look into OmniAuth for authentication using username/password or 
-
-* Create User and Friendship Model
+* Use OmniAuth for authentication using username/password or Facebook/Google/Whatever
+  * https://github.com/intridea/omniauth
+  * https://github.com/mkdynamic/omniauth-facebook
 
 
