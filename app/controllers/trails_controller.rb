@@ -1,5 +1,5 @@
 class TrailsController < ApplicationController
 	def new
-    	@trails = Trails.new
+    	@trail = Trail.new
   	end
 end
