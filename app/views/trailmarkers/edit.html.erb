@@ -1,0 +1,18 @@
+<h1>Edit Trailmarker</h1>
+<p>Did some self-reflection?</p>
+
+<% if @trailmarker.errors.present? %>
+	<ul style="color: red">
+	<% @trailmarker.errors.full_messages.each do |err| %>
+		<li><%= err %></li>
+	<% end %>
+	</ul>
+<% end %>
+
+<%= form_for @trailmarker do |f| %>
+	<%= f.label :name %>
+	<%= f.text_field :name %>
+	<%= f.label :description %>
+	<%= f.text_field :description %>
+	<%= f.submit %>
+<% end %>
