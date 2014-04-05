@@ -1,7 +1,11 @@
 <h1>My Trailmarkers</h1>
-<ul>
+<table>
+<tr>
+  <th>Trailmarker name</th>
+  <th>Trailmarker description</th>
+</tr>
 	<% @trailmarkers.each do |trailmarker| %>
-		<li><%= trailmarker.name %></li>
-		<li><%= trailmarker.description %></li>
+		<td><%= trailmarker.name %></td>
+		<td><%= trailmarker.description %></td>
 	<% end %>
-</ul>
+</table>
