@@ -1,8 +1,27 @@
 Merit::Badge.create!(
   id: 1,
-  name: "Fresh Start",
+  name: "Fresh",
   description: "Created an account"
 )
+Merit::Badge.create!(
+  id: 2,
+  name: "Pioneer",
+  description: "Created a new trail"
+)
+
+Merit::Badge.create!(
+  id: 3,
+  name: "Fresh",
+  description: "Created an account"
+)
+
+Merit::Badge.create!(
+  id: 4,
+  name: "Fresh",
+  description: "Created an account"
+)
+
+
 
 # Use this hook to configure merit parameters
 Merit.setup do |config|
