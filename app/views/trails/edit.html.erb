@@ -1,0 +1,18 @@
+<h1>Edit Trail</h1>
+<p>Self-reflection</p>
+
+<% if @trail.errors.present? %>
+	<ul style="color: red">
+	<% @trail.errors.full_messages.each do |err| %>
+		<li><%= err %></li>
+	<% end %>
+	</ul>
+<% end %>
+
+<%= form_for @trail do |f| %>
+	<%= f.label :name %>
+	<%= f.text_field :name %>
+	<%= f.label :description %>
+	<%= f.text_field :description %>
+	<%= f.submit %>
+<% end %>
