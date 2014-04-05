@@ -1,9 +1,13 @@
 Trailblaze::Application.routes.draw do
+  resources :static_pages
   resources :trails
   resources :trailmarkers
-  resources :static_pages
+  
 
-  root :to => 'static_pages#index'
+ # root :to => 'static_pages#index'
+
+  root :to => 'trails#new'
+
 end
 
 
