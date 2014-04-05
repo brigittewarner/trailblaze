@@ -1,0 +1,11 @@
+<h1>My Badges</h1>
+<table>
+<tr>
+  <th>Badge name</th>
+  <th>Badge description</th>
+</tr>
+  <% @badges.each do |badge| %>
+    <td><%= badge.name %></td>
+    <td><%= badge.description %></td>
+  <% end %>
+</table>

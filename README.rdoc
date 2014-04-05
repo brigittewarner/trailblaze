@@ -9,4 +9,5 @@
   * https://github.com/intridea/omniauth
   * https://github.com/mkdynamic/omniauth-facebook
 
+* Contain trailmarkers within trails
 
