@@ -5,3 +5,5 @@ culinary = Trail.create!(name: 'culinary', description: 'learn to cook, make mor
 attend_yoga = Trailmarker.create!(name:'attend_yoga', description: "hot vinyasa baby!")
 meditate = Trailmarker.create!(name: 'meditate', description: "try out new meditation studio")
 acupuncture = Trailmarker.create!(name: 'acupuncture', description: "stick some needles in me")
+
+chris = User.create(name: "Chris", email: "chris@example.com")
