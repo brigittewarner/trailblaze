@@ -6,6 +6,6 @@ attend_yoga = Trailmarker.create!(name:'attend_yoga', description: "hot vinyasa 
 meditate = Trailmarker.create!(name: 'meditate', description: "try out new meditation studio")
 acupuncture = Trailmarker.create!(name: 'acupuncture', description: "stick some needles in me")
 
-chris = User.create(name: "Chris", email: "chris@example.com")
-brigitte = User.create(name: "Brigitte", email: "brigitte@example.com")
-brandon = User.create(name: "Brandon", email: "brandon@example.com")
+chris = User.create!(name: "Chris", email: "chris@example.com")
+brigitte = User.create!(name: "Brigitte", email: "brigitte@example.com")
+brandon = User.create!(name: "Brandon", email: "brandon@example.com")
