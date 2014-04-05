@@ -1,28 +1,12 @@
-== README
+== TO DO
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Create User and Friendship Model
+  * http://railscasts.com/episodes/163-self-referential-association
+  * http://stackoverflow.com/questions/5612736/how-to-implement-a-friendship-model-in-rails-3-for-a-social-networking-applicati
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+* Use OmniAuth for authentication using username/password or Facebook/Google/Whatever
+  * https://github.com/intridea/omniauth
+  * https://github.com/mkdynamic/omniauth-facebook
+
+
