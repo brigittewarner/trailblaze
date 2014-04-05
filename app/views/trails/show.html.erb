@@ -18,24 +18,15 @@
   </td>
   <td>
       <!-- Trailmarker start -->
-      <div class="trailmarker">
-      	<h2>Imagine a trailmarker here</h2>
-      </div>
+
       <!-- Trailmarker end -->
+      <% @trailmarkers = Trailmarker.order('name').all %>
+      <% for trailmarker in @trailmarkers %>
+        <div class="trailmarker">
+        <td><%= trailmarker.name%></td>
+        <td><%= trailmarker.description %></td>
+        </div>
+      <% end %>
   </td>
-  <td>
-      <!-- Trailmarker start -->
-      <div class="trailmarker">
-      	<h2>Imagine a trailmarker here</h2>
-      </div>
-      <!-- Trailmarker end -->
-  </td>	
-  <td>
-      <!-- Trailmarker start -->
-      <div class="trailmarker">
-      	<h2>Imagine a trailmarker here</h2>
-      </div>
-      <!-- Trailmarker end -->
-  </td>		
 </table>
 </body>
