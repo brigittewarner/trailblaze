@@ -1,9 +1,15 @@
 Trailblaze::Application.routes.draw do
-  resources :trails
+  resources :users do
+    resources :trails do
+    end
+  end
+
   resources :trailmarkers
-  resources :users
 
   root :to => 'static_pages#index'
+
+  match '/signup', to: 'users#new', via: 'get'
+  match '/signin', to: 'sessions#new', via: 'get'
 
 end
 
