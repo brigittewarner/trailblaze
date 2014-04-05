@@ -112,6 +112,10 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   jbuilder (~> 1.2)
   jquery-rails
+<<<<<<< HEAD
+=======
+  merit
+>>>>>>> 8068cbae556325708c55e9c2296a3382fb91c8db
   pg
   rails (= 4.0.3)
   sass-rails (~> 4.0.0)
