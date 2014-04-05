@@ -1,7 +1,5 @@
-<%= form_for(@trails) do |f| %>
+<%= form_for @trail do |f| %>
 	<%= f.label :name %>
 	<%= f.text_field :description %>
-	<%= f.timestamps %>
 	<%= f.submit %>
 <% end %>
-
