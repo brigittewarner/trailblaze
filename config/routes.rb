@@ -2,6 +2,8 @@ Trailblaze::Application.routes.draw do
   resources :users do
     resources :trails do
     end
+    resources :badges do
+    end
   end
 
   resources :trailmarkers

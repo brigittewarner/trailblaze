@@ -3,6 +3,7 @@ class CreateBadges < ActiveRecord::Migration
     create_table :badges do |t|
       t.string :name
       t.text :description
+      t.boolean :status
 
       t.timestamps
     end

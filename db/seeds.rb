@@ -9,3 +9,5 @@ acupuncture = Trailmarker.create!(name: 'acupuncture', description: "stick some 
 chris = User.create(name: "Chris", email: "chris@example.com")
 brigitte = User.create(name: "Brigitte", email: "brigitte@example.com")
 brandon = User.create(name: "Brandon", email: "brandon@example.com")
+
+pioneer = Badge.create(name: "Pioneer", description: "Created a new account")
