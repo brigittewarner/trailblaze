@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20140405214432) do
   create_table "badges", force: true do |t|
     t.string   "name"
     t.text     "description"
+    t.boolean  "status"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
