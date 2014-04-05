@@ -1,0 +1,16 @@
+<table>
+	<h1>Trailmarker</h1>
+	<tr>
+		<th>ID</th>
+		<td><%= @trailmarker.id %></td>
+		<th>Name</th>
+		<td><%= @trailmarker.name %></td>
+		<th>Description</th>
+		<td><%= @trailmarker.description %></td>
+		<th>Created</th>
+		<td><%= time_ago_in_words @trailmarker.created_at %> ago on</td>,
+		<td><%= @trailmarker.created_at.strftime('%m/%d/%Y') %></td>
+	</tr>
+</table>
+<%= link_to "back to trailmarkers", trailmarkers_path %>
+<%= link_to "back to trails", trails_path %>
