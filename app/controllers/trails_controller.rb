@@ -8,7 +8,7 @@ class TrailsController < ApplicationController
   	@user = @trail.user
   end
   def new
-  	@trail = current_user.trails.new
+  	@trail = Trail.new
   end
   def create
 		@trail = Trail.new(trail_params)
