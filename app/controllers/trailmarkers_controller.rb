@@ -22,7 +22,7 @@ class TrailmarkersController < ApplicationController
   def update
 		@trailmarker = Trailmarker.find(params[:id])
 		if @trailmarker.update(trailmarker_params)
-			redirect_to trailmarkers_path, notice: "Trailmarker #{@trailmarker.name} was updated"
+			redirect_to trails_path, notice: "Trailmarker #{@trailmarker.name} was updated"
 		else
 			render 'edit'
 		end
