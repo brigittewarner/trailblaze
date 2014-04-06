@@ -8,7 +8,7 @@ acupuncture = Trailmarker.create!(name: 'acupuncture', description: "stick some 
 
 pioneer = Badge.create(name: "Pioneer", description: "Created a new account", status: false)
 
-chris = User.create!(name: "Chris", email: "chris@example.com")
-brigitte = User.create!(name: "Brigitte", email: "brigitte@example.com")
-brandon = User.create!(name: "Brandon", email: "brandon@example.com")
+chris = User.create!(name: "Chris", email: "chris@example.com", password: "example", password_confirmation: "example")
+brigitte = User.create!(name: "Brigitte", email: "brigitte@example.com", password: "example", password_confirmation: "example")
+brandon = User.create!(name: "Brandon", email: "brandon@example.com", password: "example", password_confirmation: "example")
 
