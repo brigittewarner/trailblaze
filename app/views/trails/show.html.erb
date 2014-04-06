@@ -10,22 +10,21 @@
 		<th>Description</th>
 		<td><%= @trail.description %></td>
 		<th>Started</th>
-		<td><%= time_ago_in_words @trail.created_at %> ago on</td>,
-		<td><%= @trail.created_at.strftime('%m/%d/%Y') %></td>
+		<td><%= time_ago_in_words @trail.created_at %> ago on <%= @trail.created_at.strftime('%m/%d/%Y') %></td>,
 	</div>
 	<!-- Trailhead end -->
   </td>
-  <td>
+  <tr>
       <!-- Trailmarker start -->
 
       <!-- Trailmarker end -->
       <% @trailmarkers = Trailmarker.order('name').all %>
       <% for trailmarker in @trailmarkers %>
         <div class="trailmarker">
-        <td><%= trailmarker.name%></td>
+        <th><%= trailmarker.name%></th>
         <td><%= trailmarker.description %></td>
         </div>
       <% end %>
-  </td>
+  </tr>
 </table>
 </body>

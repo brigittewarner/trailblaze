@@ -1,7 +1,8 @@
 <h1><%= @user.name %></h1>
 <% if @trail.any? then %>
-	<%= link_to 'Trails', trail_path, class: 'btn btn-warning btn-large' %>
+	<%= link_to 'View Trails', trails_path, class: 'btn btn-warning btn-large' %>
 	<% else %>
 	<%= link_to 'New Trail', new_trail_path, class: 'btn btn-warning btn-large' %>
 <% end %>
+<%= link_to 'View Badges', badges_path, class: 'btn btn-success btn-large' %>
 

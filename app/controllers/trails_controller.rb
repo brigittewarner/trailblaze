@@ -1,13 +1,14 @@
 class TrailsController < ApplicationController
   def index
-    @trails = Trail.order('id').all
+    @user = current_user
+    @trails = @user.trails.order('id').all
   end
   def show
     @trail = Trail.find(params[:id])
   	@user = @trail.user
   end
   def new
-  	@trail = Trail.new
+  	@trail = current_user.trails.new
   end
   def create
 		@trail = Trail.new(trail_params)
