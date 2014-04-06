@@ -1,14 +1,12 @@
 <body class="trail">
 <h1>Your trail to success</h1>
-<h3>Started <%= time_ago_in_words @trail.created_at %> ago on <%= @trail.created_at.strftime('%m/%d/%Y') %></h3>
 <ul>
-<li style="display:block; float: left">
-<ul style ="list-style: none; background-color: gray;">
-    <div><li>Trail</li></div>
-    <div><li><%= @trail.name %></li></div>
-    <div><li><%= @trail.description %></li></div>
-    <div><li>Started</li></div>
-    <div><li><%= time_ago_in_words @trail.created_at %> ago on <%= @trail.created_at.strftime('%m/%d/%Y') %></li></div>
+<li style="display:block; float: left;">
+<ul style ="list-style: none; background-color: #FFFFC2;  padding: 50px;">
+	<h2>Trailhead</h2>
+    <div><li style="color: #306754";>Trail<%= @trail.name %></li></div>
+    <div><li style="color: #306754";><%= @trail.description %></li></div>
+    <div><li style="color: #306754";>Started<%= time_ago_in_words @trail.created_at %> ago on <%= @trail.created_at.strftime('%m/%d/%Y') %></li></div>
 </ul>
 </li>
   <div id="content" style="display: block; float: left">
