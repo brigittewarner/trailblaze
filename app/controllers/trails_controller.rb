@@ -36,7 +36,7 @@ class TrailsController < ApplicationController
 	def destroy
 		@trail = Trail.find(params[:id])
 		@trail.destroy
-		redirect_to trails_path, notice: "Trail #{@trail.name} was deleted"
+		redirect_to trails_path, notice: "Trail #{@trail.name} was completed! Congratulations!"
 	end
 	protected
 	def trail_params
