@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Trailblaze</title>
+  <title>Trails</title>
   <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
-<body style="background-image: url(<%= asset_path 'splash.jpg' %>); background-size: 1327px 882px">
-  <%= render 'layouts/header' %>
+<body class="trail" style="background-image: url(<%= asset_path 'trailblaze_background.jpg' %>); background-repeat: repeat-x; background-height: 882px;>
   <div class="container">
     <% flash.each do |key, value| %>
       <%= content_tag(:div, value, class: "alert alert-#{key}") %>
