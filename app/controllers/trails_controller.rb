@@ -1,6 +1,6 @@
 class TrailsController < ApplicationController
   def index
-    @trails = Trail.order('name').all
+    @trails = Trail.order('id').all
   end
   def show
     @trail = Trail.find(params[:id])
