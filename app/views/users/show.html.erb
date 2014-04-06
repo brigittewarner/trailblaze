@@ -1,2 +1,11 @@
 <h1><%= @user.name %></h1>
-<%= link_to 'New Trail', new_trail_path, class: 'btn btn-warning btn-large' %>
+<%= unless @trails.has.any? %>
+	<%= link_to 'New Trail', new_trail_path, class: 'btn btn-warning btn-large' %>
+	<% else %>
+	<%= link_to 'Trails', trail_path, class: 'btn btn-warning btn-large' %>
+	<% end %>
+<% end %>
+
+
+
+
