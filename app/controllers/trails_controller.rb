@@ -1,4 +1,5 @@
 class TrailsController < ApplicationController
+	layout 'trails_show'
   def index
     @trails = Trail.order('id').all
   end

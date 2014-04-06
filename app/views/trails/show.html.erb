@@ -1,39 +1,29 @@
-<body>
+<body class="trail">
 <ul>
-    <div><li>Name</li></div>
+<li style="display:block; float: left">
+<ul style ="list-style: none; background-color: gray;">
+    <div><li>Trail</li></div>
     <div><li><%= @trail.name %></li></div>
-    <div><li>Description</li></div>
     <div><li><%= @trail.description %></li></div>
     <div><li>Started</li></div>
     <div><li><%= time_ago_in_words @trail.created_at %> ago on <%= @trail.created_at.strftime('%m/%d/%Y') %></li></div>
 </ul>
-
+</li>
+<li style="display: block; float: left">
   <div id="content">
 	<table id="trailmarkers" class="table table-hover table-bordered">
-	<tr>
-  	<td>
-  	<div id="trailhead">
-  <!-- Trailhead start -->
-		<th>Name</th>
-		<td><%= @trail.name %></td>
-		<th>Description</th>
-		<td><%= @trail.description %></td>
-		<th>Started</th>
-		<td><%= time_ago_in_words @trail.created_at %> ago on <%= @trail.created_at.strftime('%m/%d/%Y') %></td>,
-	</div>
-	<!-- Trailhead end -->
-  </td>
   <tr>
       <!-- Trailmarker start -->
-
-      <!-- Trailmarker end -->
       <% @trailmarkers = Trailmarker.order('name').all %>
       <% for trailmarker in @trailmarkers %>
         <div class="trailmarker">
         <th><%= trailmarker.name%></th>
         <td><%= trailmarker.description %></td>
+       <!-- Trailmarker end -->
         </div>
       <% end %>
   </tr>
 </table>
+</li>
+</ul>
 </body>
