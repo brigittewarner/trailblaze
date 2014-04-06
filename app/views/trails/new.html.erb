@@ -2,7 +2,7 @@
 <p>Start a new trail.</p>
 <div class="row">
   <div class="span6 offset3">
-      <%= form_for @trail, :url => user_trails_path do |f| %>
+      <%= form_for @trail, :url => trails_path do |f| %>
     	<%= f.label :name %>
     	<%= f.text_field :name %>
     	<%= f.label :description %>

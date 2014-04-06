@@ -4,8 +4,13 @@
 </tr>
 <% @trails.each do |trail| %>
 <tr>
+		<td><%= trail.id %></td>
 		<td><%= trail.name %></td>
 		<td><%= trail.description %></td>
+		<td>
+			<%= link_to 'edit', edit_trail_path(trail), class: 'btn btn-success' %>
+			<%= link_to 'delete', trail_path(trail), class: 'btn btn-danger', method: :delete, confirm: 'Are You Sure?' %>
+		</td>
 	<% end %>
 </tr>
 </table>

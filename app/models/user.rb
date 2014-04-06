@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+  has_many :initiations
+  has_many :trails, :through => :initiations
   has_many :badgifications
   has_many :badges, :through => :badgification
   has_many :trailmarkers, :through => :trails

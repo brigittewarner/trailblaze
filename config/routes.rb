@@ -1,8 +1,8 @@
 Trailblaze::Application.routes.draw do
-  resources :users do
-    resources :trails
-    resources :badges
-  end
+  resources :users
+  resources :trails
+  resources :badges
+
   resources :sessions, only: [:new, :create, :destroy]
   resources :trailmarkers
   root :to => 'static_pages#index'
