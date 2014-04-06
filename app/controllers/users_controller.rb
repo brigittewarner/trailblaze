@@ -17,10 +17,24 @@ class UsersController < ApplicationController
   def create
     @user = User.new(strong_params)
     if @user.save
+      sign_in @user
       flash[:success] = "User successfully created"
       redirect_to @user
     else
       render 'new'
+    end
+  end
+
+  def edit
+  end
+
+  def update
+    if @user.update_attributes(user)params
+      flash[:success] = 'Profile updated'
+      sign_in @user
+      redirect_to @user
+    else
+      render 'edit'
     end
   end
 
