@@ -17,6 +17,8 @@ class TrailsController < ApplicationController
 			render 'new'
 		end
 	end
+	def share
+	end
   def edit
 		@trail = Trail.find(params[:id])
 		@user = @trail.user

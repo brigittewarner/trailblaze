@@ -4,6 +4,7 @@
   <th>Path</th>
   <th>Trail Name</th>
   <th>Trail Description</th>
+  <th>Share</th>
   <th>Actions</th>
 </tr>
 <% @trails.each do |trail| %>
@@ -12,8 +13,10 @@
 		<td><%= trail.name %></td>
 		<td><%= trail.description %></td>
 		<td>
-			<%= link_to 'edit', edit_trail_path(trail), class: 'btn btn-success' %>
-			<%= link_to 'delete', trail_path(trail), class: 'btn btn-danger', method: :delete, confirm: 'Are You Sure?' %>
+		</td>
+		<td>
+			<%= link_to 'edit', edit_trail_path(trail), class: 'btn btn-success btn-small' %>
+			<%= link_to 'delete', trail_path(trail), class: 'btn btn-danger btn-small', method: :delete, confirm: 'Are You Sure?' %>
 		</td>
 	<% end %>
 </tr>
