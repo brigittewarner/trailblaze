@@ -1,6 +1,6 @@
 class TrailsController < ApplicationController
   def index
-    @trails = Trail.order('name').all
+    @trails = Trail.order('id').all
   end
   def show
     @trail = Trail.find(params[:id])
@@ -20,7 +20,7 @@ class TrailsController < ApplicationController
   def edit
 		@trail = Trail.find(params[:id])
 		@user = @trail.user
-    @trailmarker = Trailmarker.find(params[:id])
+        @trailmarker = Trailmarker.find(params[:id])
   end
   def update
 		@trail = Trail.find(params[:id])
