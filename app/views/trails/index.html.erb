@@ -1,16 +1,15 @@
 <h1>My Trails</h1>
 <table class="table table-hover table-bordered" >
 <tr>
-  <th>Path</th>
-  <th>Trail Name</th>
-  <th>Trail Description</th>
+  <th>Trail</th>
+  <th>Description</th>
   <th>Share</th>
   <th>Actions</th>
 </tr>
 <% @trails.each do |trail| %>
 <tr>
-		<td><%= link_to trail.id, trail_path(trail) %></td>
-		<td><%= trail.name %></td>
+
+		<td><%= link_to trail.name, trail_path(trail) %></td>
 		<td><%= trail.description %></td>
 		<td><%= mail_to "hello@bitca.mp", "Bitcamp Friends", subject: "example.com" +trail_path(trail).to_s %></td>
 		<td>
