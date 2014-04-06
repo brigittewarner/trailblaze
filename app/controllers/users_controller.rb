@@ -4,7 +4,7 @@ class UsersController < ApplicationController
                 only: [:index, :edit, :update, :destroy, :following, :followers]
   before_filter :correct_user, only: [:edit, :update]
   before_filter :admin_user, only: :destroy
-  
+
   def show
     @user = User.find(params[:id])
     @trail = Trail.order('id').all
@@ -29,7 +29,7 @@ class UsersController < ApplicationController
   end
 
   def update
-    if @user.update_attributes(user)params
+    if @user.update_attributes(user).params
       flash[:success] = 'Profile updated'
       sign_in @user
       redirect_to @user
