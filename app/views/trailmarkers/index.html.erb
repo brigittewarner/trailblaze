@@ -4,8 +4,10 @@
   <th>Trailmarker name</th>
   <th>Trailmarker description</th>
 </tr>
-	<% @trailmarkers.each do |trailmarker| %>
+<% @trailmarkers.each do |trailmarker| %>
+  <tr>
 		<td><%= trailmarker.name %></td>
 		<td><%= trailmarker.description %></td>
+  </tr>
 	<% end %>
 </table>
