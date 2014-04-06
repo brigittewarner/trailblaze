@@ -12,11 +12,10 @@
 		<td><%= link_to trail.id, trail_path(trail) %></td>
 		<td><%= trail.name %></td>
 		<td><%= trail.description %></td>
+		<td><%= mail_to "hello@bitca.mp", "Bitcamp Friends", subject: "example.com" +trail_path(trail).to_s %></td>
 		<td>
-		</td>
-		<td>
-			<%= link_to 'edit', edit_trail_path(trail), class: 'btn btn-success btn-small' %>
-			<%= link_to 'delete', trail_path(trail), class: 'btn btn-danger btn-small', method: :delete, confirm: 'Are You Sure?' %>
+			<%= link_to 'edit', edit_trail_path(trail), class: 'btn btn-info btn-small' %>
+			<%= link_to 'Complete Path', trail_path(trail), class: 'btn btn-success btn-small', method: :delete, confirm: 'Congratulations! Click to confirm.' %>
 		</td>
 	<% end %>
 </tr>
