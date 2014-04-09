@@ -3,7 +3,6 @@ development:
   encoding: utf8
   database: trailblaze_development
   pool: 5
-  username: 
   password:
 
 test:
@@ -11,7 +10,7 @@ test:
   encoding: utf8
   database: trailblaze_test
   pool: 5
-  username: 
+  username:
   password:
 
 production:
@@ -19,5 +18,5 @@ production:
   encoding: utf8
   database: trailblaze_production
   pool: 5
-  username: 
+  username:
   password:
