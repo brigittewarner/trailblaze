@@ -14,7 +14,7 @@
 		<td><%= mail_to "hello@bitca.mp", "Bitcamp Friends", subject: "example.com" +trail_path(trail).to_s %></td>
 		<td>
 			<%= link_to 'edit', edit_trail_path(trail), class: 'btn btn-info btn-small' %>
-			<%= link_to 'Complete Path', trail_path(trail), class: 'btn btn-success btn-small', method: :delete, confirm: 'Congratulations! Click to confirm.' %>
+			<%= link_to 'Complete Path', trail_path(trail), class: 'btn btn-success btn-small', method: :delete, data: { confirm: 'Congratulations! Click to confirm.' } %>
 		</td>
 	<% end %>
 </tr>

@@ -1,5 +1,7 @@
 class TrailsController < ApplicationController
 	layout 'trails_show'
+
+
   def index
     @trails = Trail.order('id').all
   end
@@ -12,6 +14,7 @@ class TrailsController < ApplicationController
   end
   def create
 		@trail = Trail.new(trail_params)
+    @trail.user_id = current_user.id
 		if @trail.save
 			redirect_to trails_path, notice: "Trail #{@trail.name} was created"
 		else
