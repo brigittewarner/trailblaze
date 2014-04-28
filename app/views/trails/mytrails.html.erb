@@ -1,0 +1,22 @@
+<table class="table table-hover table-bordered" >
+<tr>
+  <th>Trail</th>
+  <th>Description</th>
+  <th>Share</th>
+  <th>Actions</th>
+</tr>
+<% @trails.each do |trail| %>
+  <% if trail.user_id == current_user.id %>
+<tr>
+
+    <td><%= link_to trail.name, trail_path(trail) %></td>
+    <td><%= trail.description %></td>
+    <td><%= mail_to "hello@bitca.mp", "Bitcamp Friends", subject: "example.com" +trail_path(trail).to_s %></td>
+    <td>
+      <%= link_to 'edit', edit_trail_path(trail), class: 'btn btn-info btn-small' %>
+      <%= link_to 'Complete Path', trail_path(trail), class: 'btn btn-success btn-small', method: :delete, data: { confirm: 'Congratulations! Click to confirm.' } %>
+    </td>
+    <% end %>
+  <% end %>
+</tr>
+</table>

@@ -23,6 +23,11 @@ class TrailsController < ApplicationController
 	end
 	def share
 	end
+
+  def mytrails
+    @trails = Trail.order('id').all
+  end
+
   def edit
 		@trail = Trail.find(params[:id])
 		@user = @trail.user
