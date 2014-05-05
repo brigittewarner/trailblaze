@@ -1,3 +1,3 @@
 class Trailmarker < ActiveRecord::Base
-  belongs_to :trail
+  has_one :trail, :through => :trailification
 end
