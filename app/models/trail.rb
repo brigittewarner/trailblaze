@@ -1,7 +1,6 @@
 class Trail < ActiveRecord::Base
 	belongs_to :user
-	belongs_to :initiation
-  	has_many :trailmarkers, :through => :trailification
+	has_many :trailmarkers, :through => :trailification
 
   	after_create do |trail|
   		puts "Congratulations, you have earned the Pioneer Badge!"

@@ -5,5 +5,4 @@ class Badge < ActiveRecord::Base
   def assign_badge
 
   end
-
 end

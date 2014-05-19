@@ -1,9 +1,8 @@
 class User < ActiveRecord::Base
-  has_many :initiations
-  has_many :trails, :through => :initiations
+  has_many :trails
   has_many :trailmarkers, :through => :trails
   has_many :badgifications
-  has_many :badges, :through => :badgification
+  has_many :badges, :through => :badgifications
   before_save { email.downcase! }
   validates :name, presence: true, length: { maximum: 80 }
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(?:\.[a-z\d\-]+)*\.[a-z]+\z/i

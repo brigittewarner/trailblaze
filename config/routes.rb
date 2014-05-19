@@ -1,5 +1,6 @@
 Trailblaze::Application.routes.draw do
   resources :users
+  get '/trails/mytrails' => 'trails#mytrails', as: 'mytrails'
   resources :trails
   resources :badges
 

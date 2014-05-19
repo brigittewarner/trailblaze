@@ -8,6 +8,9 @@
     	<%= f.label :description %>
     	<%= f.text_field :description %>
       <br>
+      <%= f.check_box :available_to_public %>
+      <%= f.label :available_to_public %>
+      <br>
     	<%= f.submit "Start Trail", class: "btn btn-large btn-warning" %>
     <% end %>
   </div>
